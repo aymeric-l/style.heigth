@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style>
+	body{
+		display: flex;
+		padding: 0;
+	}
+		#un{
+			width: 100px;
+			height: 300px;
+			background: red;
+		}
+		#deux{
+			width:100px;
+			height:100px;
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+
+<div id="un"></div>
+<div id="deux" onclick="taille();"></div>
+
+
+<script>
+	function taille(tailley){
+			tailley = 300;
+			/*tailley = document.getElementById("un").style.height;*/
+			document.getElementById("deux").style.height = tailley+"px";
+			console.log(tailley);
+			/*document.getElementById("deux").style.height = tailly +"px";*/
+	}
+
+</script>
+
+</body>
+</html>
