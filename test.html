@@ -10,7 +10,7 @@
 	}
 		#un{
 			width: 100px;
-			height: 300px;
+			height: 500px;
 			background: red;
 		}
 		#deux{
@@ -18,21 +18,33 @@
 			height:100px;
 			background: blue;
 		}
+		#trois{
+			width: 200px;
+			height: 150px;
+			background: violet;
+		}
 	</style>
 </head>
 <body>
 
 <div id="un"></div>
 <div id="deux" onclick="taille();"></div>
+<div id="trois" onclick="tailleDeux();"></div>
 
 
 <script>
-	function taille(tailley){
-			tailley = 300;
-			/*tailley = document.getElementById("un").style.height;*/
-			document.getElementById("deux").style.height = tailley+"px";
-			console.log(tailley);
-			/*document.getElementById("deux").style.height = tailly +"px";*/
+	function taille(tailleUn){
+			tailleUn = document.getElementById("un").offsetHeight;
+			console.log(tailleUn);
+			document.getElementById("deux").style.height = tailleUn+"px";
+			/*document.getElementById("deux").style.height = tailley+"px";*/
+	}
+	function tailleDeux(tailleDeux, taille){
+			tailleDeux = document.getElementById("trois").offsetHeight;
+			taille = document.getElementById("trois").offsetWidth;
+			document.getElementById("deux").style.height = tailleDeux+"px";
+			document.getElementById("deux").style.width = taille+"px";
+			/*document.getElementById("deux").style.height = tailley+"px";*/
 	}
 
 </script>
